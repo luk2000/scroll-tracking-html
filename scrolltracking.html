@@ -14,10 +14,10 @@
       window.addEventListener('scroll', function() {
         // Aktuelle Scroll-Position
    
-
+   const scrollPosition = window.scrollY;
         // Sende die Scroll-Position an Wix (über das Custom Element)
         window.parent.postMessage({ type: 'scroll', scrollY: scrollPosition }, '*');
-       const scrollPosition = window.scrollY;
+    
       });
     </script>
   </body>
