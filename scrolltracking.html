@@ -10,12 +10,12 @@
   </head>
   <body>
     <script>
-      // Scroll-Event-Listener
+
       window.addEventListener('scroll', function() {
-        // Aktuelle Scroll-Position
+    
         const scrollPosition = window.scrollY;
 
-        // Sende die Scroll-Position an Wix
+     
         parent.postMessage({ type: 'scroll', scrollY: scrollPosition }, '*');
       });
     </script>
