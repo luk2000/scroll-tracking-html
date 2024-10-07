@@ -16,7 +16,7 @@
         // Listener für das Scroll-Event
         window.addEventListener('scroll', function() {
             const scrollPosition = window.scrollY;
-            console.log("Scroll-Position: " + scrollPosition);
+            //console.log("Scroll-Position: " + scrollPosition);
 
             // Sende Scroll-Position an das Parent-Window (Wix)
             window.parent.postMessage({ type: 'scroll', scrollY: scrollPosition }, '*');
