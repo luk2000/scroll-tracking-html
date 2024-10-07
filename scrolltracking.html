@@ -10,12 +10,8 @@
   </head>
   <body>
     <script>
-
       window.addEventListener('scroll', function() {
-    
         const scrollPosition = window.scrollY;
-
-     
         parent.postMessage({ type: 'scroll', scrollY: scrollPosition }, '*');
       });
     </script>
