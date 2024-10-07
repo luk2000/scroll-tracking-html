@@ -1,26 +1,23 @@
 <!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scroll Tracking</title>
+<html>
+  <head>
+    <meta charset="utf-8" />
     <style>
-        body {
-            height: 2000px; /* Simuliert eine lange Seite zum Scrollen */
-            margin: 0;
-        }
+      body {
+        margin: 0;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        // Listener für das Scroll-Event
-        window.addEventListener('scroll', function() {
-            const scrollPosition = window.scrollY;
-            console.log("Scroll-Position: " + scrollPosition);
+      // Scroll-Event-Listener
+      window.addEventListener('scroll', function() {
+        // Aktuelle Scroll-Position
+        const scrollPosition = window.scrollY;
 
-            // Sende Scroll-Position an das Parent-Window (Wix)
-            window.parent.postMessage({ type: 'scroll', scrollY: scrollPosition }, '*');
-        });
+        // Sende die Scroll-Position an Wix (über das Custom Element)
+        window.parent.postMessage({ type: 'scroll', scrollY: scrollPosition }, '*');
+      });
     </script>
-</body>
+  </body>
 </html>
